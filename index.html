@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Windows Desktop Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="desktop-shell">
+        <div class="wallpaper"></div>
+        <div class="desktop-area">
+            <div class="desktop-icons" aria-label="Desktop icons">
+                <button class="desktop-icon" data-window="about" aria-label="About Me">
+                    <div class="icon-graphic">👤</div>
+                    <div class="icon-label">About Me</div>
+                </button>
+                <button class="desktop-icon" data-window="story" aria-label="My Story">
+                    <div class="icon-graphic">📖</div>
+                    <div class="icon-label">My Story</div>
+                </button>
+                <button class="desktop-icon" data-window="personality" aria-label="Personality">
+                    <div class="icon-graphic">✨</div>
+                    <div class="icon-label">Personality</div>
+                </button>
+                <button class="desktop-icon" data-window="gallery" aria-label="Photo Gallery">
+                    <div class="icon-graphic">🖼️</div>
+                    <div class="icon-label">Photo Gallery</div>
+                </button>
+                <button class="desktop-icon" data-window="interests" aria-label="Interests">
+                    <div class="icon-graphic">🎯</div>
+                    <div class="icon-label">Interests</div>
+                </button>
+                <button class="desktop-icon" data-window="skills" aria-label="Skills">
+                    <div class="icon-graphic">⚡</div>
+                    <div class="icon-label">Skills</div>
+                </button>
+                <button class="desktop-icon" data-window="projects" aria-label="Projects">
+                    <div class="icon-graphic">🚀</div>
+                    <div class="icon-label">Projects</div>
+                </button>
+                <button class="desktop-icon" data-window="music" aria-label="Music">
+                    <div class="icon-graphic">🎵</div>
+                    <div class="icon-label">Music</div>
+                </button>
+                <button class="desktop-icon" data-window="contact" aria-label="Contact">
+                    <div class="icon-graphic">💌</div>
+                    <div class="icon-label">Contact</div>
+                </button>
+                <button class="desktop-icon hidden-icon" data-window="journal" aria-label="Journal">
+                    <div class="icon-graphic">📓</div>
+                    <div class="icon-label">Journal</div>
+                </button>
+                <button class="desktop-icon" data-window="chat" aria-label="Class Chat">
+                    <div class="icon-graphic">💬</div>
+                    <div class="icon-label">Class Chat</div>
+                </button>
+            </div>
+
+            <div class="window-container" aria-live="polite"></div>
+        </div>
+
+        <div class="taskbar" aria-label="Taskbar">
+            <div class="taskbar-left">
+                <button class="start-button" aria-label="Start menu"><span class="start-icon">+</span><span>Start</span></button>
+            </div>
+            <div class="taskbar-centre" id="taskbarIndicators" aria-label="Open windows"></div>
+            <div class="taskbar-right">
+                <div class="clock" id="desktopClock" aria-label="Current time"></div>
+            </div>
+        </div>
+    </div>
+
+    <template id="windowTemplate">
+        <div class="window" role="dialog" aria-modal="false">
+            <div class="window-header" tabindex="0">
+                <div class="window-title"></div>
+                <div class="window-controls">
+                    <button class="window-minimize" title="Minimize">−</button>
+                    <button class="window-close" title="Close">✕</button>
+                </div>
+            </div>
+            <div class="window-content"></div>
+        </div>
+    </template>
+
+    <template id="galleryModalTemplate">
+        <div class="modal-backdrop">
+            <div class="modal-card">
+                <button class="modal-close" aria-label="Close">✕</button>
+                <img alt="Gallery preview" src="" />
+                <p class="modal-caption"></p>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
